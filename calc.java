@@ -1,3 +1,4 @@
+// Римские цифры обозначаются через английские буквы V,I и X.
 package calculator;
 
 import java.util.Scanner;
