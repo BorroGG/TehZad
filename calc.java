@@ -1,4 +1,4 @@
-// Римские цифры обозначаются через английские буквы V,I и X.
+//Римские цифры обозначаются через английские буквы V,I и X.
 package calculator;
 
 import java.util.Scanner;
@@ -6,30 +6,33 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		int vibor = 0;
 			Scanner input = new Scanner(System.in);
 			System.out.println("Input: ");
 			String s = input.nextLine();
 			if(Arab.proverkaArab(s)){
 				if(Deistvie.proverkaDeistviya(s)!='e'){
+				vibor = 1;
 				Arab arab = new Arab();
 				arab.st = s;
 				arab.one = arab.prisvoenieOne(arab.st);
 				arab.two = arab.prisvoenieTwo(arab.st);
 				arab.deistvie = Deistvie.proverkaDeistviya(arab.st);
 				System.out.println("Output: ");
-				System.out.println(arab.schet(arab.one, arab.two, arab.deistvie));
+				System.out.println(arab.schetArab(arab.one, arab.two, arab.deistvie, vibor));
 				} else {
 					System.out.println("Введена неверная строка.");
 				}
 			} else if(Rim.proverkaRim(s)){
 				if(Deistvie.proverkaDeistviya(s)!='e'){
+					vibor = -1;
 					Rim rim = new Rim();
 					rim.st = s;
 					rim.one = rim.prisvoenieOne(rim.st);
 					rim.two = rim.prisvoenieTwo(rim.st);
 					rim.deistvie = Deistvie.proverkaDeistviya(rim.st);
 					System.out.println("Output: ");
-					System.out.println(rim.schet(rim.one, rim.two, rim.deistvie));
+					System.out.println(rim.schetRim(rim.schetArab(rim.one, rim.two, rim.deistvie, vibor)));
 				} else{
 					System.out.println("Введена неверная строка.");
 				}
@@ -56,7 +59,7 @@ class  Deistvie{
 		}
 		return 'e';
 	}
-	int schet(int one, int two, char deistvie){
+	int schetArab(int one, int two, char deistvie, int vibor){
 		int otvet=0;
 		if(deistvie=='-'){
 			otvet=one-two;
@@ -75,6 +78,53 @@ class  Deistvie{
 			return otvet;
 		}  
 		return otvet;
+	}
+	String schetRim(int otvet){
+		String resh = "";
+		if(otvet==0){
+		return "0";
+		}
+		if(otvet<0){
+		otvet = otvet*(-1);
+		resh = "-";
+		}
+		while(otvet!=0){
+		           if(otvet/100>0){
+		             resh = resh + "C";
+		             otvet = otvet - 100;
+		        } else if(otvet/90>0){
+		        resh = resh + "XC";
+		        otvet = otvet - 90;
+		        } else if(otvet/50>0){
+		        resh = resh + "L";
+		        otvet = otvet - 50;
+		        } else if(otvet/40>0){
+		        resh = resh + "XL";
+		        otvet = otvet - 40;
+		        }  else if(otvet/10>0){
+		        resh = resh + "X";
+		        otvet = otvet - 10;
+		        } else if(otvet/9>0){
+		        resh = resh + "IX";
+		        otvet = otvet - 9;
+		        } else if(otvet/5>0){
+		        resh = resh + "V";
+		        otvet = otvet - 5;
+		        } else if(otvet==4){
+		        resh = resh + "IV";
+		        otvet = otvet - 4;
+		        } else if(otvet==3){
+		        resh = resh + "III";
+		        otvet = otvet - 3;
+		        } else if(otvet==2){
+		        resh = resh + "II";
+		        otvet = otvet - 2;
+		        }else if(otvet==1){
+		        resh = resh + "I";
+		        otvet = otvet - 1;
+		        }
+		}
+		return resh;
 	}
 }
 
@@ -127,13 +177,16 @@ class Arab extends Deistvie{
 
 class Rim extends Deistvie{
 	static boolean proverkaRim(String s){
-		if(s.indexOf('I')>0 || s.indexOf('X')>0 || s.indexOf('V')>0){
+		if(s.startsWith("I") || s.startsWith("X") || s.startsWith("V")){
+			if(s.endsWith("I") || s.endsWith("X") || s.endsWith("V")){
 			for(int i = 0; i<10; i++){
 				if(s.indexOf(i+"")>=0){
 					return false;
 				}
 			}
 			return true;
+			}
+			return false;
 		}
 		return false;
 	}
