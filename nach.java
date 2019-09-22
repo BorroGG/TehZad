@@ -52,7 +52,7 @@ class myFrame extends JFrame {
 	static int menu = 0;
 	public myFrame(){
 		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
-				new ImageIcon("d:\\cursor.png").getImage(),
+				new ImageIcon("C:\\GameJava\\cursor.png").getImage(),
 				new Point(0,0),"custom cursor"));
 		
 		MenuPanel panelMenu1 = new MenuPanel();
@@ -79,12 +79,12 @@ class myFrame extends JFrame {
 		
         ContinueButt.setSize(192,48);
         ContinueButt.setLocation((SizeOkno.screenSizeW/2-100),(SizeOkno.screenSizeH/2-300));
-        ContinueButt.setIcon(new ImageIcon("d:\\butcont.jpg"));
+        ContinueButt.setIcon(new ImageIcon("C:\\GameJava\\butcont.jpg"));
         ContinueButt.setBorderPainted(false);
         ContinueButt.setFocusPainted(false);
         ContinueButt.setContentAreaFilled(false);
-        ContinueButt.setRolloverIcon(new ImageIcon("d:\\butcontup.jpg" ));
-        ContinueButt.setPressedIcon (new ImageIcon("d:\\butcontup.jpg"));
+        ContinueButt.setRolloverIcon(new ImageIcon("C:\\GameJava\\butcontup.jpg" ));
+        ContinueButt.setPressedIcon (new ImageIcon("C:\\GameJava\\butcontup.jpg"));
         ContinueButt.addActionListener(new ActionListener(){
 
 			@Override
@@ -99,12 +99,12 @@ class myFrame extends JFrame {
 		
 		buttNewGame.setSize(192,48);
 		buttNewGame.setLocation((SizeOkno.screenSizeW/2-100),(SizeOkno.screenSizeH/2-200));
-		buttNewGame.setIcon(new ImageIcon("d:\\butnewgame.jpg"));
+		buttNewGame.setIcon(new ImageIcon("C:\\GameJava\\butnewgame.jpg"));
 		buttNewGame.setBorderPainted(false);
 		buttNewGame.setFocusPainted(false);
 		buttNewGame.setContentAreaFilled(false);
-		buttNewGame.setRolloverIcon(new ImageIcon("d:\\butnewgameup.jpg" ));
-		buttNewGame.setPressedIcon (new ImageIcon("d:\\butnewgameup.jpg"));
+		buttNewGame.setRolloverIcon(new ImageIcon("C:\\GameJava\\butnewgameup.jpg" ));
+		buttNewGame.setPressedIcon (new ImageIcon("C:\\GameJava\\butnewgameup.jpg"));
 		buttNewGame.addActionListener(new ActionListener(){
 
 			@Override
@@ -131,12 +131,12 @@ class myFrame extends JFrame {
 		});
 		buttExit.setSize(192,48);
 		buttExit.setLocation((SizeOkno.screenSizeW/2-100),(SizeOkno.screenSizeH/2-100));
-		buttExit.setIcon(new ImageIcon("d:\\butexit.jpg"));
+		buttExit.setIcon(new ImageIcon("C:\\GameJava\\butexit.jpg"));
 		buttExit.setBorderPainted(false);
 		buttExit.setFocusPainted(false);
 		buttExit.setContentAreaFilled(false);
-		buttExit.setRolloverIcon(new ImageIcon("d:\\butexitup.jpg" ));
-		buttExit.setPressedIcon (new ImageIcon("d:\\butexitup.jpg"));
+		buttExit.setRolloverIcon(new ImageIcon("C:\\GameJava\\butexitup.jpg" ));
+		buttExit.setPressedIcon (new ImageIcon("dC:\\GameJava\\butexitup.jpg"));
         panelMenu1.add(buttExit);
 		
 		 
@@ -155,7 +155,7 @@ class myFrame extends JFrame {
 		});
 		buttVoin.setSize(248,400);
 		buttVoin.setLocation((SizeOkno.screenSizeW/2-300),(SizeOkno.screenSizeH/2-300));
-		buttVoin.setIcon(new ImageIcon("d:\\voinN.png"));
+		buttVoin.setIcon(new ImageIcon("C:\\GameJava\\voinN.png"));
 		panelMenu2.add(buttVoin);
 		
 		JButton buttStrelok = new JButton();
@@ -173,7 +173,7 @@ class myFrame extends JFrame {
 		});
 		buttStrelok.setSize(248,400);
 		buttStrelok.setLocation((SizeOkno.screenSizeW/2+100),(SizeOkno.screenSizeH/2-300));
-		buttStrelok.setIcon(new ImageIcon("d:\\strelokV.png"));
+		buttStrelok.setIcon(new ImageIcon("C:\\GameJava\\strelokV.png"));
 		panelMenu2.add(buttStrelok);
 		
 		
@@ -188,12 +188,12 @@ class myFrame extends JFrame {
 		});
 		butt3.setSize(50,50);
 		butt3.setLocation(0,0);
-		butt3.setIcon(new ImageIcon("d:\\ex.png"));
+		butt3.setIcon(new ImageIcon("C:\\GameJava\\ex.png"));
 		butt3.setBorderPainted(false);
         butt3.setFocusPainted(false);
         butt3.setContentAreaFilled(false);
-        butt3.setRolloverIcon(new ImageIcon("d:\\ex.png" ));
-        butt3.setPressedIcon (new ImageIcon("d:\\ex.png"));
+        butt3.setRolloverIcon(new ImageIcon("C:\\GameJava\\ex.png" ));
+        butt3.setPressedIcon (new ImageIcon("C:\\GameJava\\ex.png"));
 		panelGame.add(butt3);
 		
 		
@@ -205,7 +205,7 @@ class MenuPanel extends JPanel {
 	Image fon;
 	public MenuPanel(){
 		try {
-			fon = ImageIO.read(new File("d:\\wall0011.jpg"));
+			fon = ImageIO.read(new File("C:\\GameJava\\wall0011.jpg"));
 		} catch (IOException e) {
 			
 		}
@@ -761,85 +761,85 @@ void vijnTrue(int x, int y){
 		addMouseListener(new myMouse());
 		addMouseMotionListener(new myMouse());
 		try {
-			fon = ImageIO.read(new File("d:\\grass.png"));
+			fon = ImageIO.read(new File("C:\\GameJava\\grass.png"));
 		} catch (IOException e) {
 			
 		}
 		
 		try {
-			slotVoisk = ImageIO.read(new File("d:\\slotVoisk.png"));
+			slotVoisk = ImageIO.read(new File("C:\\GameJava\\slotVoisk.png"));
 		} catch (IOException e) {
 			
 		}
 		
 		try {
-			portraitImage1 = ImageIO.read(new File("d:\\port1.png"));
+			portraitImage1 = ImageIO.read(new File("C:\\GameJava\\port1.png"));
 		} catch (IOException e) {
 			
 		}
 		
 		try {
-			nameHero1 = ImageIO.read(new File("d:\\nameHero1.png"));
+			nameHero1 = ImageIO.read(new File("C:\\GameJava\\nameHero1.png"));
 		} catch (IOException e) {
 			
 		}
 		
 		try {
-			nameHero2 = ImageIO.read(new File("d:\\nameHero2.png"));
+			nameHero2 = ImageIO.read(new File("C:\\GameJava\\nameHero2.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
-			portraitImage2 = ImageIO.read(new File("d:\\port2.png"));
+			portraitImage2 = ImageIO.read(new File("C:\\GameJava\\port2.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
-			goldStatus = ImageIO.read(new File("d:\\goldStatus.png"));
+			goldStatus = ImageIO.read(new File("C:\\GameJava\\goldStatus.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
-			goldFon = ImageIO.read(new File("d:\\goldFon.png"));
+			goldFon = ImageIO.read(new File("C:\\GameJava\\goldFon.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
-			castle = ImageIO.read(new File("d:\\castle.png"));
-		} catch (IOException e) {
-			
-		}
-		
-		try {
-			voinImg = ImageIO.read(new File("d:\\voin2.png"));
+			castle = ImageIO.read(new File("C:\\GameJava\\castle.png"));
 		} catch (IOException e) {
 			
 		}
 		
 		try {
-			strelokImg = ImageIO.read(new File("d:\\strelok1.png"));
+			voinImg = ImageIO.read(new File("C:\\GameJava\\voin2.png"));
+		} catch (IOException e) {
+			
+		}
+		
+		try {
+			strelokImg = ImageIO.read(new File("C:\\GameJava\\strelok1.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
-			tropa1Img = ImageIO.read(new File("d:\\tropaLP1.png"));
+			tropa1Img = ImageIO.read(new File("C:\\GameJava\\tropaLP1.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
-			tropa2Img = ImageIO.read(new File("d:\\tropaVN1.png"));
+			tropa2Img = ImageIO.read(new File("C:\\GameJava\\tropaVN1.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
-			castleMess = ImageIO.read(new File("d:\\castleMess.png"));
+			castleMess = ImageIO.read(new File("C:\\GameJava\\castleMess.png"));
 		} catch (IOException e) {
 			
 		}
 		
 		try {
 			for(int i = 0; i<8; i++){
-			spawn[i] = ImageIO.read(new File("d:\\spawn"+i+".png"));
+			spawn[i] = ImageIO.read(new File("C:\\GameJava\\spawn"+i+".png"));
 			}
 		} catch (IOException e) {
 			
@@ -847,7 +847,7 @@ void vijnTrue(int x, int y){
 		
 		try {
 			for(int i = 0; i<8; i++){
-			walkA[i] = ImageIO.read(new File("d:\\walkA"+i+".png"));
+			walkA[i] = ImageIO.read(new File("C:\\GameJava\\walkA"+i+".png"));
 			}
 		} catch (IOException e) {
 			
@@ -855,85 +855,85 @@ void vijnTrue(int x, int y){
 		
 		try {
 			for(int i = 0; i<8; i++){
-			walkK[i] = ImageIO.read(new File("d:\\walkR"+i+".png"));
+			walkK[i] = ImageIO.read(new File("C:\\GameJava\\walkR"+i+".png"));
 			}
 		} catch (IOException e) {
 			
 		}
 		try {
-			strelkaPravo = ImageIO.read(new File("d:\\strelkaPravo.png"));
+			strelkaPravo = ImageIO.read(new File("C:\\GameJava\\strelkaPravo.png"));
 		} catch (IOException e) {
 			
 		}
 		
 		try {
-			strelkaVverh = ImageIO.read(new File("d:\\strelkaVverh.png"));
+			strelkaVverh = ImageIO.read(new File("C:\\GameJava\\strelkaVverh.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
 			for(int i = 0; i<2; i++){
-			voisko[i] = ImageIO.read(new File("d:\\voisko"+i+".png"));
+			voisko[i] = ImageIO.read(new File("C:\\GameJava\\voisko"+i+".png"));
 			}
 		} catch (IOException e) {
 			
 		}
 		try {
-			tree1 = ImageIO.read(new File("d:\\tree1.png"));
+			tree1 = ImageIO.read(new File("C:\\GameJava\\tree1.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
-			wall = ImageIO.read(new File("d:\\wall.png"));
+			wall = ImageIO.read(new File("C:\\GameJava\\wall.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
-			rock = ImageIO.read(new File("d:\\rock3.png"));
-		} catch (IOException e) {
-			
-		}
-		
-		try {
-			rockCenter = ImageIO.read(new File("d:\\rockCenter.png"));
+			rock = ImageIO.read(new File("C:\\GameJava\\rock3.png"));
 		} catch (IOException e) {
 			
 		}
 		
 		try {
-			ex = ImageIO.read(new File("d:\\ex.png"));
+			rockCenter = ImageIO.read(new File("C:\\GameJava\\rockCenter.png"));
 		} catch (IOException e) {
 			
 		}
 		
 		try {
-			cosmos = ImageIO.read(new File("d:\\tma.png"));
+			ex = ImageIO.read(new File("C:\\GameJava\\ex.png"));
 		} catch (IOException e) {
 			
 		}
 		
 		try {
-			bar = ImageIO.read(new File("d:\\bar0.png"));
+			cosmos = ImageIO.read(new File("C:\\GameJava\\tma.png"));
+		} catch (IOException e) {
+			
+		}
+		
+		try {
+			bar = ImageIO.read(new File("C:\\GameJava\\bar0.png"));
 		} catch (IOException e) {
 			
 		}
 		try {
 			for(int i = 0; i<6; i++){
-			treasure[i] = ImageIO.read(new File("d:\\treasure"+i+".png"));
+			treasure[i] = ImageIO.read(new File("C:\\GameJava\\treasure"+i+".png"));
 			}
 		} catch (IOException e) {
 			
 		}
 		try {
 			for(int i = 0; i<6; i++){
-			rockTree[i] = ImageIO.read(new File("d:\\rockTree"+i+".png"));
+			rockTree[i] = ImageIO.read(new File("C:\\GameJava\\rockTree"+i+".png"));
 			}
 		} catch (IOException e) {
 			
 		}
 		try {
 			for(int i = 0; i<4; i++){
-			treeS[i] = ImageIO.read(new File("d:\\treeS"+i+".png"));
+			treeS[i] = ImageIO.read(new File("C:\\GameJava\\treeS"+i+".png"));
 			}
 		} catch (IOException e) {
 			
