@@ -1,1 +1,1 @@
-# Калькулятор с римскими цифрами.
+# Roman numeral calculator.
